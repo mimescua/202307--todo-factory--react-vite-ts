@@ -1,0 +1,11 @@
+.sidebar {
+  background: #0e1f54;
+  flex-basis: 20rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile, .categories {
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+ul {
+    /* padding: 1rem; */
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title {
+    margin: auto;
+}

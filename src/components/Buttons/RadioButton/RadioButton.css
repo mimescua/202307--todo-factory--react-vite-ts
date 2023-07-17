@@ -1,0 +1,29 @@
+.radiobutton-input {
+  visibility: hidden;
+}
+
+.radiobutton-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.custom-radiobutton {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #d2c5ef;
+  display: inline-block;
+}
+.radiobutton-input:checked + .custom-radiobutton {
+  border: 2px solid #261ba4;
+  background-color: #3f27b3;
+}
+
+.radiobutton-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

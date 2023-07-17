@@ -1,0 +1,24 @@
+.icon-container{
+    position: relative;
+}
+.icon-container-complete{
+    /* stroke: green; */
+}
+.icon-container-delete{
+    /* stroke: blue; */
+}
+
+.icon-svg{
+    width: 3rem;
+    height: 3rem;
+    fill: none;
+    stroke-width: 2;
+}
+
+.icon-container-complete:hover .icon-svg{
+    stroke: blue;
+}
+
+.icon-container-delete:hover .icon-svg{
+    stroke: red;
+}
