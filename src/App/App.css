@@ -14,9 +14,6 @@
   flex-grow: 1;
 }
 
-.search {
-}
-
 .content {
   display: flex;
   overflow-y: auto;
@@ -31,13 +28,6 @@
   flex-grow: 0;
   padding: 1rem;
   overflow-y: scroll;
-}
-
-.categories {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  position: sticky;
 }
 
 .body {
