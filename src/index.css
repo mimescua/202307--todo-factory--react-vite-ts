@@ -19,7 +19,7 @@ code {
 }
 
 #root {
-  width: 100%;
+  width: 60%;
   height: 100%;
   display: flex;
 }
@@ -31,4 +31,13 @@ code {
 
 #root > main {
   flex-grow: 1;
+}
+
+#side-panel-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 0;
 }

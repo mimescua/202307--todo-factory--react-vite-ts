@@ -1,2 +1,20 @@
 .search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-box {
+  height: 3rem;
+  /* background: green; */
+  background: none;
+  border: none;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  font-size: medium;
+  text-indent: 1rem;
+}
+
+.search-box:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

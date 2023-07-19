@@ -4,6 +4,7 @@ import { TodoCounter } from "../components/TodoCounter";
 import { TodoSearch } from "../components/TodoSearch";
 import { TodoList } from "../components/TodoList";
 import { TodoItem } from "../components/TodoItem";
+import { SidePanel } from "../components/SidePanel";
 import { TodoCategories } from "../components/TodoCategories";
 import { CreateTodo } from "../components/Buttons/CreateTodo";
 import { Category } from "../components/Buttons/Category";
@@ -23,7 +24,6 @@ function AppUI() {
       <main className="main">
         <TodoSearch />
         <div className="content">
-          <div className="list">
             <h3>CATEGORIES</h3>
             <TodoContext.Consumer>
               {({
@@ -33,6 +33,8 @@ function AppUI() {
                 searchedTodos,
                 handleDeleteTodo,
                 handleCompleteTodo,
+                openPanel,
+                setOpenPanel,
               }) => (
                 <>
                   <div className="categories">
@@ -69,12 +71,15 @@ function AppUI() {
                       />
                     ))}
                   </TodoList>
+                  {openPanel && (
+                    <SidePanel>
+                      <></>
+                    </SidePanel>
+                  )}
                 </>
               )}
             </TodoContext.Consumer>
             <CreateTodo />
-          </div>
-          <div className="body"></div>
         </div>
       </main>
     </>

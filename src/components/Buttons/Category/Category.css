@@ -1,8 +1,8 @@
 .category {
   background: white;
   border-radius: 1rem;
-  flex: 1;
-  /* width: 9rem; */
+  flex-grow: 0.1;
+  flex-shrink: 1;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;

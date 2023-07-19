@@ -1,23 +1,15 @@
 li {
   height: 5rem;
-  /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+  position: relative;
 }
 
 .todo-item {
+  width: 97%;
   display: flex;
   padding: 0.5rem;
-  /* padding: 0 0.5rem; */
   justify-content: space-between;
   align-items: center;
-  /* border: solid thin black; */
   border-radius: 1rem;
-}
-
-.delete-warning{
-  position: absolute;
-  width: 29rem;
 }
 
 .display{
@@ -25,6 +17,10 @@ li {
   transform : translateX(0%);
   transition-timing-function: ease-in;
   transition: 0.2s;
+}
+
+.delete-warning, .display {
+  position: absolute;
 }
 
 .checked {
@@ -37,6 +33,11 @@ li {
 
 .deleted {
   transform : translateX(-120%);
+}
+
+.title {
+  height: 60px;
+  line-height: 60px;  /* center text vertically */
 }
 
 /** BUttons **/

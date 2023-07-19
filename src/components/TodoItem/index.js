@@ -23,7 +23,6 @@ function TodoItem({ text, color, completed, created, onComplete, onDelete }) {
         <button className="delete-icon" onClick={onDelete} value={created} />
       </div>
       <div className={`todo-item display ${completed && 'checked'} ${active && 'active'} ${deleted && 'deleted'}`}>
-        {/* <Checkbox label="" value={completed} onChange={handleChange} color={color} /> */}
         <Checkbox label="" value={completed} onChange={onComplete} color={color} />
         <span className="title">{text}</span>
         <button className="set-delete" onClick={handleDelete} />
