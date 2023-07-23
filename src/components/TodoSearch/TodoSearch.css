@@ -1,20 +1,21 @@
 .search {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
 }
 
 .search-box {
-  height: 3rem;
-  /* background: green; */
-  background: none;
+  height: 3.5rem;
   border: none;
-  margin: 0 1rem;
   border-radius: 1rem;
   font-size: medium;
   text-indent: 1rem;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
 
 .search-box:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }

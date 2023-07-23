@@ -38,6 +38,12 @@ function TodoProvider({ children }) {
     }
     return countedCategories;
   };
+
+  const handleAddTodo = (text, completed, category, created) => {
+    const newTodos = [...todos];
+    newTodos.push({text, completed, category, created})
+    saveTodos(newTodos);
+  }
   const handleDeleteTodo = (event) => {
     if (!event.target.value) return;
     const index = todos.findIndex(
@@ -66,6 +72,7 @@ function TodoProvider({ children }) {
         searchValue,
         setSearchValue,
         searchedTodos,
+        handleAddTodo,
         handleDeleteTodo,
         handleCompleteTodo,
         openPanel,

@@ -1,0 +1,22 @@
+.side-panel {
+  padding: 0 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: rgba(16, 1, 46, 1) 0px 4px 16px; */
+  /* box-shadow: rgba(176, 190, 206, 0.45) -10px 1px 15px -5px; */
+}
+
+.side-pannel-title {
+  padding-top: 4rem;
+}
+
+.sidepanel-shape{
+  height: 600px;
+  transform: translateY(-20%);
+  border-radius: 50% 22% 40% 80%;
+	filter: blur(50px);
+  background: radial-gradient(circle at 10% 50%,rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
+  opacity: 0.4;
+  z-index: -1;
+}

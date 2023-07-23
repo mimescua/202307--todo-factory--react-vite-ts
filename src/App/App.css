@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   background: #f9faff;
+  padding-top: 4rem;
 }
 
 .main > .search {
   flex-basis: 5rem;
+  margin-top: 2rem;
 }
 
 .main > .content {
@@ -16,13 +18,19 @@
   display: flex;
   flex-direction: column;
   flex-basis: 30rem;
-  padding: 1rem;
+  padding: 0 2rem;
   overflow-y: scroll;
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.todos-title{
+  padding: 0 2rem;
+  margin-top: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  color: #8a57ff;
+}

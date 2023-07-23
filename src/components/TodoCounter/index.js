@@ -6,13 +6,13 @@ function TodoCounter() {
   const { totalTodos, completedTodos } = React.useContext(TodoContext);
 
   return (
-    <h1>
+    <h3 className="todo-counter-title">
       {totalTodos === 0
-        ? "You haven't any TODOS"
+        ? "You don't have any TODO"
         : totalTodos === completedTodos
-        ? "Congrats! All of your todos has been completed"
+        ? "Congrats! All of your TODOS have been completed"
         : `You completed ${completedTodos} of ${totalTodos} TODOS`}
-    </h1>
+    </h3>
   );
 }
 export { TodoCounter };

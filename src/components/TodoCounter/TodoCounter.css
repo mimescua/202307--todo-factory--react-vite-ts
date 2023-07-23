@@ -1,6 +1,5 @@
-h1 {
-  font-size: 24px;
+.todo-counter-title {
   text-align: center;
   margin: 0;
-  padding: 48px;
+  padding-top: 1rem;
 }
