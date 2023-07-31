@@ -1,19 +1,19 @@
 .category {
-  background: white;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 14px 15px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin: 1rem 0 4rem 0;
+	background: white;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 14px 15px;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	margin: 1rem 0 4rem 0;
 }
 
 .category > h4 {
-  border-bottom: 5px solid;
-  border-image-slice: 1;
-  /* border-width: 5px; */
-  padding-bottom: 1rem;
+	border-bottom: 5px solid;
+	border-image-slice: 1;
+	/* border-width: 5px; */
+	padding-bottom: 1rem;
 }
 
 .category > pre {
-  font-family: inherit;
+	font-family: inherit;
 }

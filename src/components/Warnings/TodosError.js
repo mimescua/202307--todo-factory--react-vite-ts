@@ -1,5 +1,5 @@
-function TodosError(){
-    return <p>Something gone wrong!</p>
+function TodosError() {
+	return <p>Something gone wrong!</p>;
 }
 
-export default TodosError
+export default TodosError;

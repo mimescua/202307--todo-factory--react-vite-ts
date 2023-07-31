@@ -1,33 +1,33 @@
 .categories-title {
-  padding: 2rem 0 0 0;
-  margin-bottom: 0;
+	padding: 2rem 0 0 0;
+	margin-bottom: 0;
 }
 
 .categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .progress-container {
-  height: 6px;
-  width: 100%;
-  background-color: #dee1f2;
-  border-radius: 6px;
+	height: 6px;
+	width: 100%;
+	background-color: #dee1f2;
+	border-radius: 6px;
 }
 
 .progress-filler {
-  height: 100%;
-  background: #0e1f54;
-  opacity: 0.85;
-  border-radius: inherit;
-  text-align: right;
+	height: 100%;
+	background: #0e1f54;
+	opacity: 0.85;
+	border-radius: inherit;
+	text-align: right;
 }
 
 .progress-label {
-  position: fixed;
-  color: #0e1f54;
-  font-weight: bold;
-  font-size: small;
-  transform: translateY(-22px) !important;
+	position: fixed;
+	color: #0e1f54;
+	font-weight: bold;
+	font-size: small;
+	transform: translateY(-22px) !important;
 }

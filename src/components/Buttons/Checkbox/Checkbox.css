@@ -1,33 +1,33 @@
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  border: 5px solid;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+input[type='checkbox'] {
+	-webkit-appearance: none;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	border: 5px solid;
+	cursor: pointer;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
+input[type='checkbox']::before {
+	content: '';
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
-input[type="checkbox"]::before {
-  /* // previous styles */
-  display: none;
+input[type='checkbox']::before {
+	/* // previous styles */
+	display: none;
 }
 
-input[type="checkbox"]:checked::before {
-  display: block;
+input[type='checkbox']:checked::before {
+	display: block;
 }

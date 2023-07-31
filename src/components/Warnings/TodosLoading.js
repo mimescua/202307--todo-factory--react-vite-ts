@@ -1,5 +1,5 @@
-function TodosLoading(){
-    return <p>Loading  TODOS...</p>
+function TodosLoading() {
+	return <p>Loading TODOS...</p>;
 }
 
-export default TodosLoading
+export default TodosLoading;

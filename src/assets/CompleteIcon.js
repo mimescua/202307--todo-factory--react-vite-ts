@@ -1,8 +1,8 @@
-import React from 'react'
-import { TodoIcon } from './TodoIcon'
+import React from 'react';
+import { TodoIcon } from './TodoIcon';
 
 function CompleteIcon({ completed }) {
-    return <TodoIcon type="complete" color={completed? "blue" : "gray"} />
+	return <TodoIcon type="complete" color={completed ? 'blue' : 'gray'} />;
 }
 
-export { CompleteIcon }
+export { CompleteIcon };
