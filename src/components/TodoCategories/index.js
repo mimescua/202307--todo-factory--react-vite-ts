@@ -1,11 +1,13 @@
 import React from 'react';
-import { TodoContext } from '../../context';
 import { Category } from '../Buttons/Category';
 import './TodoCategories.css';
 
-function TodoCategories() {
-	const { categories, completedTodos, totalTodos, totalByCategory } =
-		React.useContext(TodoContext);
+function TodoCategories({
+	categories,
+	completedTodos,
+	totalTodos,
+	totalByCategory,
+}) {
 	const todoProgress = totalTodos
 		? ((completedTodos * 100) / totalTodos).toFixed(1)
 		: 0;

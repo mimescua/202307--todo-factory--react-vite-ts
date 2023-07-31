@@ -1,10 +1,7 @@
 import React from 'react';
-import { TodoContext } from '../../context';
 import './TodoForm.css';
 
-function TodoForm() {
-	const { categories, setOpenPanel, handleAddTodo } =
-		React.useContext(TodoContext);
+function TodoForm({ categories, setOpenPanel, handleAddTodo }) {
 	const [todoValue, setTodoValue] = React.useState('');
 	const [category, setCategory] = React.useState('none');
 
@@ -17,7 +14,7 @@ function TodoForm() {
 		setOpenPanel(false);
 	};
 
-	const handleCancel = (event) => {
+	const handleCancel = () => {
 		setOpenPanel(false);
 	};
 

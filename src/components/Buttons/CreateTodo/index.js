@@ -1,10 +1,8 @@
 import React from 'react';
-import { TodoContext } from '../../../context';
 import './CreateTodo.css';
 
-function CreateTodo(props) {
-	const { setOpenPanel } = React.useContext(TodoContext);
-	const handleopenPanel = (event) => {
+function CreateTodo({ setOpenPanel }) {
+	const handleopenPanel = () => {
 		setOpenPanel((prevModal) => !prevModal);
 	};
 	return (
