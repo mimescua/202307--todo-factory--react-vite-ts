@@ -1,11 +1,84 @@
-import { AppUI } from './AppUI';
-import { TodoProvider } from '../context';
+import React from 'react';
+import { CreateTodo } from '../components/Buttons/CreateTodo';
+import { SidePanel } from '../components/SidePanel';
+import { Sidebar } from '../components/Sidebar';
+import { TodoCategories } from '../components/TodoCategories';
+import { TodoCounter } from '../components/TodoCounter';
+import { TodoForm } from '../components/TodoForm';
+import { TodoItem } from '../components/TodoItem';
+import { TodoList } from '../components/TodoList';
+import { TodoSearch } from '../components/TodoSearch';
+import { NoTodos, TodosError, TodosLoading } from '../components/Warnings';
+import { useTodos } from '../hooks';
+import { isEmptyArray } from '../utils';
+import './App.css';
 
 function App() {
+	const {
+		loading,
+		error,
+		categories,
+		totalByCategory,
+		completedTodos,
+		totalTodos,
+		searchValue,
+		setSearchValue,
+		searchedTodos,
+		handleAddTodo,
+		handleDeleteTodo,
+		handleCompleteTodo,
+		openPanel,
+		setOpenPanel,
+	} = useTodos();
+
 	return (
-		<TodoProvider>
-			<AppUI />
-		</TodoProvider>
+		<>
+			<h1 className="logo">TODO ✅ Factory</h1>
+			<Sidebar>
+				<TodoCategories
+					categories={categories}
+					completedTodos={completedTodos}
+					totalTodos={totalTodos}
+					totalByCategory={totalByCategory}
+				/>
+				<TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+			</Sidebar>
+			<main className="main">
+				<h3 className="todos-title">TODAY'S TODOS</h3>
+				<TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+				<div className="content">
+					<TodoList>
+						{loading && <TodosLoading />}
+						{error && <TodosError />}
+						{!loading && isEmptyArray(searchedTodos) && <NoTodos />}
+						{searchedTodos.map((todo, index) => (
+							<TodoItem
+								key={todo.created}
+								text={todo.text}
+								color={
+									categories.find((category) => category.text === todo.category)
+										.color
+								}
+								completed={todo.completed}
+								created={todo.created}
+								onComplete={() => handleCompleteTodo(todo.created)}
+								onDelete={handleDeleteTodo}
+							/>
+						))}
+					</TodoList>
+					<CreateTodo setOpenPanel={setOpenPanel} />
+					{openPanel && (
+						<SidePanel>
+							<TodoForm
+								categories={categories}
+								setOpenPanel={setOpenPanel}
+								handleAddTodo={handleAddTodo}
+							/>
+						</SidePanel>
+					)}
+				</div>
+			</main>
+		</>
 	);
 }
 

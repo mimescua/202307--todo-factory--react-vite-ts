@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 
-//CTRL + D => Select instances one by one
-//CTRL + SHIFT + l => Select all instances
-export function useLocalStorage(itemName, initialValue) {
-	const [item, setItem] = useState(initialValue);
-	const [loading, setLoading] = useState(true);
-	const [error, setError] = useState(false);
+function useLocalStorage(itemName, initialValue) {
+	const [item, setItem] = React.useState(initialValue);
+	const [loading, setLoading] = React.useState(true);
+	const [error, setError] = React.useState(false);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		setTimeout(() => {
 			try {
 				const localStorageItem = localStorage.getItem(itemName);
@@ -36,3 +34,5 @@ export function useLocalStorage(itemName, initialValue) {
 
 	return { item, saveItem, loading, error };
 }
+
+export default useLocalStorage;
