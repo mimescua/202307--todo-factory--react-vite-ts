@@ -38,7 +38,7 @@ function App() {
 	return (
 		<>
 			<h1 className="logo">TODO ✅ Factory</h1>
-			<Sidebar>
+			<Sidebar loading={loading}>
 				<TodoCategories
 					categories={categories}
 					completedTodos={completedTodos}
@@ -49,7 +49,11 @@ function App() {
 			</Sidebar>
 			<main className="main">
 				<h3 className="todos-title">TODAY'S TODOS</h3>
-				<TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+				<TodoSearch
+					searchValue={searchValue}
+					setSearchValue={setSearchValue}
+					loading={loading}
+				/>
 				<div className="content">
 					<TodoList
 						error={error}
@@ -62,20 +66,6 @@ function App() {
 							<TodosEmptySearch searchValue={searchValue} />
 						)}
 						onEmptyTodos={() => <NoTodos />}
-						// render={(todo) => (
-						// 	<TodoItem
-						// 		key={todo.created}
-						// 		text={todo.text}
-						// 		color={
-						// 			categories.find((category) => category.text === todo.category)
-						// 				.color
-						// 		}
-						// 		completed={todo.completed}
-						// 		created={todo.created}
-						// 		onComplete={() => handleCompleteTodo(todo.created)}
-						// 		onDelete={handleDeleteTodo}
-						// 	/>
-						// )}
 					>
 						{(todo) => (
 							<TodoItem

@@ -3,3 +3,7 @@
 	margin: 0;
 	padding-top: 1rem;
 }
+
+.todo-counter-title--loading {
+	opacity: 25%;
+}

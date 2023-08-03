@@ -1,9 +1,13 @@
 import React from 'react';
 import './TodoCounter.css';
 
-function TodoCounter({ totalTodos, completedTodos }) {
+function TodoCounter({ totalTodos, completedTodos, loading }) {
 	return (
-		<h3 className="todo-counter-title">
+		<h3
+			className={`todo-counter-title ${
+				!!loading && 'todo-counter-title--loading'
+			}`}
+		>
 			{totalTodos === 0
 				? "You don't have any TODO"
 				: totalTodos === completedTodos

@@ -7,14 +7,21 @@ function TodoCategories({
 	completedTodos,
 	totalTodos,
 	totalByCategory,
+	loading,
 }) {
 	const todoProgress = totalTodos
 		? ((completedTodos * 100) / totalTodos).toFixed(1)
 		: 0;
 	return (
 		<>
-			<h3 className="categories-title">CATEGORIES</h3>
-			<div className="categories">
+			<h3
+				className={`categories-title ${
+					!!loading && 'categories-title--loading'
+				}`}
+			>
+				CATEGORIES
+			</h3>
+			<div className={`categories ${!!loading && 'categories--loading'}`}>
 				{categories.map((category, index) => (
 					<Category
 						key={index}
@@ -27,7 +34,11 @@ function TodoCategories({
 					/>
 				))}
 			</div>
-			<div className="progress-container">
+			<div
+				className={`progress-container ${
+					!!loading && 'progress-container--loading'
+				}`}
+			>
 				<div
 					className="progress-filler"
 					style={{ width: todoProgress ? `${todoProgress}%` : 0 }}

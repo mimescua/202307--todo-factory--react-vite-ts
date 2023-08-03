@@ -1,6 +1,7 @@
+import React from 'react';
 import './Sidebar.css';
 
-function Sidebar({ children }) {
+function Sidebar({ loading, children }) {
 	return (
 		<section className="sidebar">
 			<div className="profile">
@@ -14,7 +15,9 @@ function Sidebar({ children }) {
 				<p>willstars@mail.com</p>
 			</div>
 			<div className="sidebar-shape" />
-			{children}
+			{React.Children.toArray(children).map((child) =>
+				React.cloneElement(child, { loading })
+			)}
 		</section>
 	);
 }

@@ -31,3 +31,9 @@
 	font-size: small;
 	transform: translateY(-22px) !important;
 }
+
+.categories-title--loading,
+.categories--loading,
+.progress-container--loading {
+	opacity: 25%;
+}
