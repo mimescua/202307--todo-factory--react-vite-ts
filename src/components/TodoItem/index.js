@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './TodoItem.css';
 import { Checkbox } from '../Buttons/Checkbox';
+import './TodoItem.css';
 
 function TodoItem({ text, color, completed, created, onComplete, onDelete }) {
 	const [checked, setChecked] = useState(completed);

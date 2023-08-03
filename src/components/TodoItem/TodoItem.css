@@ -1,6 +1,7 @@
 li {
 	height: 5rem;
 	position: relative;
+	list-style: none;
 }
 
 .todo-item {

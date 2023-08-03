@@ -8,9 +8,13 @@ import { TodoForm } from '../components/TodoForm';
 import { TodoItem } from '../components/TodoItem';
 import { TodoList } from '../components/TodoList';
 import { TodoSearch } from '../components/TodoSearch';
-import { NoTodos, TodosError, TodosLoading } from '../components/Warnings';
+import {
+	NoTodos,
+	TodosEmptySearch,
+	TodosError,
+	TodosLoading,
+} from '../components/Warnings';
 import { useTodos } from '../hooks';
-import { isEmptyArray } from '../utils';
 import './App.css';
 
 function App() {
@@ -47,11 +51,33 @@ function App() {
 				<h3 className="todos-title">TODAY'S TODOS</h3>
 				<TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 				<div className="content">
-					<TodoList>
-						{loading && <TodosLoading />}
-						{error && <TodosError />}
-						{!loading && isEmptyArray(searchedTodos) && <NoTodos />}
-						{searchedTodos.map((todo, index) => (
+					<TodoList
+						error={error}
+						loading={loading}
+						totalTodos={totalTodos}
+						searchedTodos={searchedTodos}
+						onError={() => <TodosError />}
+						onLoading={() => <TodosLoading />}
+						onEmptysearchResult={() => (
+							<TodosEmptySearch searchValue={searchValue} />
+						)}
+						onEmptyTodos={() => <NoTodos />}
+						// render={(todo) => (
+						// 	<TodoItem
+						// 		key={todo.created}
+						// 		text={todo.text}
+						// 		color={
+						// 			categories.find((category) => category.text === todo.category)
+						// 				.color
+						// 		}
+						// 		completed={todo.completed}
+						// 		created={todo.created}
+						// 		onComplete={() => handleCompleteTodo(todo.created)}
+						// 		onDelete={handleDeleteTodo}
+						// 	/>
+						// )}
+					>
+						{(todo) => (
 							<TodoItem
 								key={todo.created}
 								text={todo.text}
@@ -64,8 +90,9 @@ function App() {
 								onComplete={() => handleCompleteTodo(todo.created)}
 								onDelete={handleDeleteTodo}
 							/>
-						))}
+						)}
 					</TodoList>
+
 					<CreateTodo setOpenPanel={setOpenPanel} />
 					{openPanel && (
 						<SidePanel>
