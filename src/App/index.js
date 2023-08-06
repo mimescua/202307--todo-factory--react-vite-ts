@@ -1,5 +1,6 @@
 import React from 'react';
 import { CreateTodo } from '../components/Buttons/CreateTodo';
+import { ChangeAlertWithStorageListener } from '../components/ChangeAlert';
 import { SidePanel } from '../components/SidePanel';
 import { Sidebar } from '../components/Sidebar';
 import { TodoCategories } from '../components/TodoCategories';
@@ -33,6 +34,7 @@ function App() {
 		handleCompleteTodo,
 		openPanel,
 		setOpenPanel,
+		sincronizeTodos,
 	} = useTodos();
 
 	return (
@@ -95,6 +97,7 @@ function App() {
 					)}
 				</div>
 			</main>
+			<ChangeAlertWithStorageListener sincronize={sincronizeTodos} />
 		</>
 	);
 }
