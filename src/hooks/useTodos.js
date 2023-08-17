@@ -59,22 +59,30 @@ function useTodos() {
 		saveTodos(newTodos);
 	};
 
-	return {
+	const state = {
 		loading,
 		error,
 		categories: defaultCategories,
 		totalByCategory,
-		completedTodos,
 		totalTodos,
+		completedTodos,
 		searchValue,
-		setSearchValue,
 		searchedTodos,
+		openPanel,
+	};
+
+	const stateUpdaters = {
+		setSearchValue,
 		handleAddTodo,
 		handleDeleteTodo,
 		handleCompleteTodo,
-		openPanel,
 		setOpenPanel,
 		sincronizeTodos,
+	};
+
+	return {
+		state,
+		stateUpdaters,
 	};
 }
 

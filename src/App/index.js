@@ -19,23 +19,28 @@ import { useTodos } from '../hooks';
 import './App.css';
 
 function App() {
+	const { state, stateUpdaters } = useTodos();
+
 	const {
 		loading,
 		error,
 		categories,
 		totalByCategory,
-		completedTodos,
 		totalTodos,
+		completedTodos,
 		searchValue,
-		setSearchValue,
 		searchedTodos,
+		openPanel,
+	} = state;
+
+	const {
+		setSearchValue,
 		handleAddTodo,
 		handleDeleteTodo,
 		handleCompleteTodo,
-		openPanel,
 		setOpenPanel,
 		sincronizeTodos,
-	} = useTodos();
+	} = stateUpdaters;
 
 	return (
 		<>
