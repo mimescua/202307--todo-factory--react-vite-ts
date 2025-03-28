@@ -19,11 +19,7 @@
 	transform: translateY(-25%);
 	border-radius: 50% 22% 40% 80%;
 	filter: blur(30px);
-	background: radial-gradient(
-		circle at 15% 50%,
-		rgba(76, 0, 255, 1),
-		rgba(76, 0, 255, 0)
-	);
+	background: radial-gradient(circle at 15% 50%, rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
 	opacity: 0.8;
 }
 

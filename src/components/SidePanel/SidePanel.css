@@ -16,11 +16,7 @@
 	transform: translateY(-20%);
 	border-radius: 50% 22% 40% 80%;
 	filter: blur(50px);
-	background: radial-gradient(
-		circle at 10% 50%,
-		rgba(76, 0, 255, 1),
-		rgba(76, 0, 255, 0)
-	);
+	background: radial-gradient(circle at 10% 50%, rgba(76, 0, 255, 1), rgba(76, 0, 255, 0));
 	opacity: 0.4;
 	z-index: -1;
 }
